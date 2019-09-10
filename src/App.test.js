@@ -2,8 +2,8 @@ import React from "react";
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import { createModel } from "@xstate/test";
 import { makeFakePromise } from "./make-fake-promise";
-import pageMachine from "./page-machine";
-import App from "./index";
+import { pageMachine } from "./page-machine";
+import App from "./App";
 
 describe("page", () => {
   const testModel = createModel(

@@ -48,8 +48,8 @@ export const pageMachine = Machine(
           onError: STATES.LOADING_ERROR
         },
         meta: {
-          test: ({ getByTestId }) => {
-            getByTestId("loading");
+          test: ({ getByText }) => {
+            getByText(/^loading$/i);
           }
         }
       },
