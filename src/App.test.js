@@ -19,19 +19,16 @@ describe("page", () => {
       fireEvent.click(getByText(/^cancel$/i));
     },
     LOAD: ({ getByText }) => {
-      // fireEvent.click(getByText('Good'));
+      // noop
     },
     MAKE_DIRTY: ({ getByText }) => {
-      // fireEvent.click(getByText("Good"));
+      fireEvent.click(getByText(/^make form dirty$/i));
     },
-    // MAKE_READY: ({ getByText }) => {
-    //   // fireEvent.click(getByText('Good'));
-    // },
     SAVE: ({ getByText }) => {
-      fireEvent.click(getByText("Good"));
+      fireEvent.click(getByText(/^save$/i));
     },
     SAVE_AND_EXIT: ({ getByText }) => {
-      fireEvent.click(getByText("Good"));
+      fireEvent.click(getByText(/^save and return$/i));
     },
     "done.invoke.fetch": () => {}
   });
